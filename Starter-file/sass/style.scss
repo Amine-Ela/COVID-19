@@ -1,3 +1,4 @@
+@import "conseil.scss";
 $color_nav:#b1d2e3;
 $color_logo:#308ab7;
 $color_yellow:#f4cf1b;
@@ -25,7 +26,9 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    
 }
+a{text-decoration: none;}
 
 
 header{

@@ -91,7 +91,12 @@ onetime(gPop,'click',handler);
 //Eventlistner Add TODOS
 btn.addEventListener('click',e =>{
    e.preventDefault();
-   generateTemp(addForm.add.value);
+   if (addForm.add.value == ''){
+      alert('You must write something');
+   } else{
+      generateTemp(addForm.add.value);
+   }
+   addForm.add.value = '';
 });
 /************* Fin Adding TO DO**************/
 //  generateTemp(addForm.add.value);
@@ -100,19 +105,16 @@ btn.addEventListener('click',e =>{
 
 /*************Deleting  TO DO**************/
 list.addEventListener('click',e =>{
+
    if(e.target.classList.contains("delete")){
-      const closing = e.target;
-      const elementlist = closing.parentNode;
-      list.removeChild(elementlist);
+          confirm("voulez-vous vraiment supprimer?");
+          const closing = e.target;
+          const elementlist = closing.parentNode;
+          list.removeChild(elementlist);
    }
 });
 
-// if (e.target.classList.contains("delete"))
 
-// }
-// const closing = e.target;
-// const elementlist = closing.parentNode;
-// list.removeChild(elementlist)
 
 /************* Fin Deleting  TO DO**************/
 
@@ -125,31 +127,51 @@ list.addEventListener('click',e =>{
 //we will apply a class to the Todos that dont match and the that class will
 
 // have keyup event 
+ 
 
 
-
+// search.addEventListener('keyup', () =>{
+//    //get value of input
+//   const search_value = search.value.toUpperCase();
+//   // get names ul
+//   let ul = document.getElementById('names');
+//   // get lis from ul
+//   let li = ul.querySelectorAll('li.list-group-item');
+//   //loop through list-group-item lis
+//   for(let i = 0; i<li.length; i++){
+//     let span = li[i].getElementsByTagName('span')[0];
+//     //if matched
+//     if(span.innerHTML.toUpperCase().indexOf(search_value) > -1){
+//       li[i].style.display = '';
+//     }else{
+//       li[i].style.display = 'none';
+//     }
+//   }
+// })
 const retrieve = (term) =>{
    //function pour faire un filtre i
    let items = [];
  for ( const element of list.children){
     const item = element.innerText;
-
     if (item.includes(term)){
         items.push(item);
     }
+
    }
    console.table(items);
-// console.log(list.children);
+   console.log(list.children);
 };  
 
 
 //evenement de recherche des mots clés 
 search.addEventListener('keyup', () =>{
-  
    const search_value = search.value;
    retrieve(search_value);
 
 })
 
+
+
 /*************************************Fin SEARCH ITEM********************************************/
+
 

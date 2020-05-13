@@ -1,12 +1,12 @@
-
-  .proteger{
+// //////////////top-content///////////////////
+.proteger{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     .title-prtg{
-        color:#1087c7;
-        font-size: 20px;
+        color: $color_titre;
+        font-size: $font-titre;
         text-align: center;
         margin: 20px;
     }
@@ -25,13 +25,13 @@
            width: 9rem;
          }
          p{
-            color:#308ab7;
+            color:$color_back;
          }
         }
     }
     .home{
-        color: #308ab7;
-        font-size: 20px;
+        color: $color_back;
+        font-size: $font-titre;
         text-align: center;
         margin: 20px;
         p{
@@ -51,30 +51,30 @@
     background-image: url(/img/bgftr.png);
     background-size: cover;
     //justify-content: center;
-    padding: 30px;
+    padding: 35px;
     .info{
         text-align: center;
         h1{
-            font-size: 20px;
-            color: #308ab7;
+            font-size: $font-titre;
+            color: $color_titre;
             padding-bottom: 40px;;
         }
         p{
             padding-bottom: 15px;
-            color: blue;
-            font-size: 20px;
+            color: $color_back;
+            font-size: $font-nav;
         }
     }
     .infmain{
-        padding: 0px 39px
+        padding: 0px 70px
     }
     .site{
         padding-top: 73px;
         a{
             background-image: url(/img/footer.png);
             padding: 21px;
-            font-size: 20px;
-            color:blue;
+            font-size: $font-header;
+            color: $color_white;
         }
     }
 }
@@ -84,8 +84,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    color:#308ab7;
-    font-size: 20px;
+    color: $color_titre;
+    font-size: $font-nav;
     .prt2{
         width: 100%;
         display: flex;
@@ -96,7 +96,7 @@
         .img3{
             text-align: center;
             padding: 90px 138px;
-            color: black;
+            color: $color_back
         }
     }
 }

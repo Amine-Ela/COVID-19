@@ -14,17 +14,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Amine-Ela/C2N3_C3N3/issues"
+    "url": "git+https://github.com/zakaria0912/C2N3_C3N3.git"
   },
   "keywords": [
     "[]"
   ],
-  "author": "Amine El Achari",
+  "author": "zakaria",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zakaria0912/C2N3_C3N3/issues"
+  },
+  "homepage": "https://github.com/zakaria0912/C2N3_C3N3#readme",
   "devDependencies": {
     "autoprefixer": "^9.7.5",
     "concat": "^1.0.3",
     "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0"
   }
 }
